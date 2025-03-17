@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taskify</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+      <div class="header">
+        <h1 class="header-title">Taskify</h1>
+        <input type="text" class="search" placeholder="search" />
+      </div>
+    <div class="board">
+      <div class="column">
+        <div class="column-header">
+          <div class="column-title">To Start</div>
+        </div>
+        <div class="task-list" id="start-list">
+          <div class="task">
+            <h2 class="task-title">Title of the task</h2>
+            <p class="task-description">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum
+              molestiae ducimus saepe, aspernatur, perspiciatis harum facere at,
+              praesentium libero accusantium nihil quibusdam quam alias ratione
+              facilis? Reprehenderit qui soluta asperiores!
+            </p>
+            <div class="task-meta">
+              <span class="task-priority priority-medium">Medium</span>
+              <span class="task-date">
+                <i class="far fa-clock"></i>
+                March 15, 2025
+              </span>
+              <span>1 hr ago</span>
+            </div>
+            <div class="edit-buttons">
+              <button class="edit-button" onclick="editTask(1)">Edit</button>
+              <button class="delete-button" onclick="deleteTask(1)">
+                Delete
+              </button>
+            </div>
+          </div>
+          <div class="task">
+            <h2 class="task-title">Title of the task</h2>
+            <p class="task-description">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum
+              molestiae ducimus saepe, aspernatur, perspiciatis harum facere at,
+              praesentium libero accusantium nihil quibusdam quam alias ratione
+              facilis? Reprehenderit qui soluta asperiores!
+            </p>
+            <div class="task-meta">
+              <span class="task-priority priority-medium">Medium</span>
+              <span class="task-date">
+                <i class="far fa-clock"></i>
+                March 12, 2025
+              </span>
+              <span>1 hr ago</span>
+            </div>
+            <div class="edit-buttons">
+              <button class="edit-button" onclick="editTask(1)">Edit</button>
+              <button class="delete-button" onclick="deleteTask(1)">
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="add-task" onclick="showAddTaskModal('start-list')">
+          <span>Add new</span>
+          <span>+</span>
+        </div>
+      </div>
+      <!-- In Progress  -->
+      <div class="column">
+        <div class="column-header">
+          <div class="column-title">In Progress</div>
+        </div>
+        <div class="task-list" id="inprogress-list">
+          <div class="task">
+            <h2 class="task-title">Title of the task</h2>
+            <p class="task-description">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum
+              molestiae ducimus saepe, aspernatur, perspiciatis harum facere at,
+              praesentium libero accusantium nihil quibusdam quam alias ratione
+              facilis? Reprehenderit qui soluta asperiores!
+            </p>
+            <div class="task-meta">
+              <span class="task-priority priority-medium">Medium</span>
+              <span class="task-date">
+                <i class="far fa-clock"></i>
+                March 02, 2025
+              </span>
+              <span>1 hr ago</span>
+            </div>
+            <div class="edit-buttons">
+              <button class="edit-button" onclick="editTask(1)">Edit</button>
+              <button class="delete-button" onclick="deleteTask(1)">
+                Delete
+              </button>
+            </div>
+          </div>
+          <div class="task">
+            <h2 class="task-title">Title of the task</h2>
+            <p class="task-description">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum
+              molestiae ducimus saepe, aspernatur, perspiciatis harum facere at,
+              praesentium libero accusantium nihil quibusdam quam alias ratione
+              facilis? Reprehenderit qui soluta asperiores!
+            </p>
+            <div class="task-meta">
+              <span class="task-priority priority-medium">Medium</span>
+              <span class="task-date">
+                <i class="far fa-clock"></i>
+                March 05, 2025
+              </span>
+              <span>1 hr ago</span>
+            </div>
+            <div class="edit-buttons">
+              <button class="edit-button" onclick="editTask(1)">Edit</button>
+              <button class="delete-button" onclick="deleteTask(1)">
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="add-task" onclick="showAddTaskModal('inprogress-list')">
+          <span>Add new</span>
+          <span>+</span>
+        </div>
+      </div>
+      <!-- Under Review -->
+      <div class="column">
+        <div class="column-header">
+          <div class="column-title">Under Review</div>
+        </div>
+        <div class="task-list" id="review-list">
+          <div class="task">
+            <h2 class="task-title">Title of the task</h2>
+            <p class="task-description">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum
+              molestiae ducimus saepe, aspernatur, perspiciatis harum facere at,
+              praesentium libero accusantium nihil quibusdam quam alias ratione
+              facilis? Reprehenderit qui soluta asperiores!
+            </p>
+            <div class="task-meta">
+              <span class="task-priority priority-medium">Medium</span>
+              <span class="task-date">
+                <i class="far fa-clock"></i>
+                March 02, 2025
+              </span>
+              <span>1 hr ago</span>
+            </div>
+            <div class="edit-buttons">
+              <button class="edit-button" onclick="editTask(1)">Edit</button>
+              <button class="delete-button" onclick="deleteTask(1)">
+                Delete
+              </button>
+            </div>
+          </div>
+          <div class="task">
+            <h2 class="task-title">Title of the task</h2>
+            <p class="task-description">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum
+              molestiae ducimus saepe, aspernatur, perspiciatis harum facere at,
+              praesentium libero accusantium nihil quibusdam quam alias ratione
+              facilis? Reprehenderit qui soluta asperiores!
+            </p>
+            <div class="task-meta">
+              <span class="task-priority priority-medium">Medium</span>
+              <span class="task-date">
+                <i class="far fa-clock"></i>
+                March 05, 2025
+              </span>
+              <span>1 hr ago</span>
+            </div>
+            <div class="edit-buttons">
+              <button class="edit-button" onclick="editTask(1)">Edit</button>
+              <button class="delete-button" onclick="deleteTask(1)">
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="add-task" onclick="showAddTaskModal('review-list')">
+          <span>Add new</span>
+          <span>+</span>
+        </div>
+      </div>
+      <!-- Finished -->
+      <div class="column">
+        <div class="column-header">
+          <div class="column-title">Finished</div>
+        </div>
+        <div class="task-list" id="finished-list">
+          <div class="task">
+            <h2 class="task-title">Title of the task</h2>
+            <p class="task-description">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum
+              molestiae ducimus saepe, aspernatur, perspiciatis harum facere at,
+              praesentium libero accusantium nihil quibusdam quam alias ratione
+              facilis? Reprehenderit qui soluta asperiores!
+            </p>
+            <div class="task-meta">
+              <span class="task-priority priority-medium">Medium</span>
+              <span class="task-date">
+                <i class="far fa-clock"></i>
+                March 02, 2025
+              </span>
+              <span>1 hr ago</span>
+            </div>
+            <div class="edit-buttons">
+              <button class="edit-button" onclick="editTask(1)">Edit</button>
+              <button class="delete-button" onclick="deleteTask(1)">
+                Delete
+              </button>
+            </div>
+          </div>
+          <div class="task">
+            <h2 class="task-title">Title of the task</h2>
+            <p class="task-description">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum
+              molestiae ducimus saepe, aspernatur, perspiciatis harum facere at,
+              praesentium libero accusantium nihil quibusdam quam alias ratione
+              facilis? Reprehenderit qui soluta asperiores!
+            </p>
+            <div class="task-meta">
+              <span class="task-priority priority-medium">Medium</span>
+              <span class="task-date">
+                <i class="far fa-clock"></i>
+                March 05, 2025
+              </span>
+              <span>1 hr ago</span>
+            </div>
+            <div class="edit-buttons">
+              <button class="edit-button" onclick="editTask(1)">Edit</button>
+              <button class="delete-button" onclick="deleteTask(1)">
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="add-task" onclick="showAddTaskModal('finished-list')">
+          <span>Add new</span>
+          <span>+</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add/Edit task model -->
+
+    <div id="taskModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 class="modal-title">
+          <form id="taskForm">
+            <input type="hidden" id="taskId" value="" />
+            <input type="hidden" id="columnId" value="" />
+
+            <div class="form-group">
+              <label for="taskTitle">Title</label>
+              <input
+                type="text"
+                id="taskTitle"
+                placeholder="Enter task title"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="taskDescription">Description</label>
+              <textarea
+                id="taskDescription"
+                placeholder="Enter task description"
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="taskPriority">Priority</label>
+              <select id="taskPriority">
+                <option value="low">Low</option>
+                <option value="medium" selected>Medium</option>
+                <option value="urgent">Urgent</option>
+              </select>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn-cancel" onclick="closeModal()">
+                Cancel
+              </button>
+              <button type="submit" class="btn-primary">Save</button>
+            </div>
+          </form>
+        </h2>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
